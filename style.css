@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+:root{
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 16px;
+    --primary-blue:hsl(225, 100%, 94%);
+    --primary-bright:hsl(245, 75%, 52%);
+    --va-pa-blue:hsl(225, 100%, 98%);
+    --na-blue: hsl(224, 23%, 55%);
+    --da-blue:hsl(223, 47%, 23%);
+}
+main{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background: url(images/pattern-background-desktop.svg) var(--primary-blue);
+    background-repeat: no-repeat;
+    text-align: center;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background: var(--va-pa-blue); */
+    background: white;
+    max-width: 25rem;
+    height: 88vh;
+    border-radius: 15px;
+}
+.card img{
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 1.5rem;
+}
+h1{
+    font-weight: 900;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: var(--da-blue);
+}
+.desc{
+    max-width: 300px;
+    color: var(--na-blue);
+    margin-bottom: 1rem;
+}
+.plan{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    height: 5rem;
+    background: var(--va-pa-blue);
+    border-radius: 10px;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+}
+.container {
+    width: 57%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.plan img {
+    width: 4rem;
+    margin-bottom: 0%;
+}
+.plan-text h4{
+    color: var(--da-blue);
+}
+.plan-text p {
+    color: var(--na-blue);
+}
+a{
+    color: var(--primary-bright);
+}
+a:hover{
+    text-decoration: none;
+}
+button{
+    color: white;
+    background: var(--primary-bright);
+    width: 80%;
+    border: none;
+    padding: .8rem 0%;
+    border-radius: 10px;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    box-shadow: 0 10px 8px var(--primary-blue);
+    cursor: pointer;
+}
+button:hover{
+    background: hsla(245, 75%, 52%, 0.711);
+}
+.cancel{
+    color: var(--na-blue);
+    cursor: pointer;
+}
+.cancel:hover{
+    color: var(--da-blue);
+}
+@media screen and (max-width:420px) {
+    .card{
+        width: 80vw;
+        height: 75vh;
+    }
+    .desc{
+        max-width: 90%;
+    }
+    .plan{
+        max-width: 270px;
+        padding: .4rem .8rem;
+    }
+    .plan img{
+        max-width: 3rem;
+    }
+    .container{
+        width: 65%;
+    }
+    .plan-text h4,p{
+        font-size: 14px;
+    }
+    .plan a{
+        font-size: 12px;
+    }
+}
